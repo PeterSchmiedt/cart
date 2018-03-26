@@ -1,0 +1,6 @@
+framework module Pods_eman_cart {
+  umbrella header "Pods-eman_cart-umbrella.h"
+
+  export *
+  module * { export * }
+}

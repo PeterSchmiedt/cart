@@ -7,13 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24FA8D5DCA824C2F84D60C39 /* Pods_eman_cartTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 586985D13DFF53BAE23D4AE2 /* Pods_eman_cartTests.framework */; };
+		E1840BEE206810F600475E16 /* Currencies.json in Resources */ = {isa = PBXBuildFile; fileRef = E1840BED206810F600475E16 /* Currencies.json */; };
 		E1960F0D20582014001E0D4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1960F0C20582014001E0D4C /* AppDelegate.swift */; };
-		E1960F0F20582015001E0D4C /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1960F0E20582015001E0D4C /* FirstViewController.swift */; };
-		E1960F1120582015001E0D4C /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1960F1020582015001E0D4C /* SecondViewController.swift */; };
 		E1960F1420582015001E0D4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1960F1220582015001E0D4C /* Main.storyboard */; };
 		E1960F1620582015001E0D4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1960F1520582015001E0D4C /* Assets.xcassets */; };
 		E1960F1920582015001E0D4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1960F1720582015001E0D4C /* LaunchScreen.storyboard */; };
 		E1960F2420582015001E0D4C /* eman_cartTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1960F2320582015001E0D4C /* eman_cartTests.swift */; };
+		E1960F31205EAF78001E0D4C /* ProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1960F30205EAF78001E0D4C /* ProductCell.xib */; };
+		E1960F34205EB0E5001E0D4C /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1960F33205EB0E5001E0D4C /* ProductCell.swift */; };
+		E197892D205EB24F00445F7C /* Products.json in Resources */ = {isa = PBXBuildFile; fileRef = E197892C205EB24F00445F7C /* Products.json */; };
+		E1978930205EB54500445F7C /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E197892F205EB54500445F7C /* ProductsViewController.swift */; };
+		E1978933205EB62200445F7C /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1978932205EB62200445F7C /* Product.swift */; };
+		E1978936205EB73700445F7C /* ProductsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1978935205EB73700445F7C /* ProductsService.swift */; };
+		E1978938205EBCAE00445F7C /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1978937205EBCAE00445F7C /* Currency.swift */; };
+		E197893A205EBCE700445F7C /* Rates.json in Resources */ = {isa = PBXBuildFile; fileRef = E1978939205EBCE700445F7C /* Rates.json */; };
+		E197893C205EBD6A00445F7C /* CurrenciesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E197893B205EBD6A00445F7C /* CurrenciesService.swift */; };
+		E197893E205EBEC200445F7C /* ProductsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E197893D205EBEC200445F7C /* ProductsViewModel.swift */; };
+		E1C139F1205ED8D300652552 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C139F0205ED8D300652552 /* CartViewController.swift */; };
+		E1C139F5206067BC00652552 /* CartService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C139F4206067BC00652552 /* CartService.swift */; };
+		E1C13A022062B78E00652552 /* CartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C13A012062B78E00652552 /* CartCell.swift */; };
+		E1EE3DAC2066874200996045 /* CartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EE3DAB2066874200996045 /* CartViewModel.swift */; };
+		E1EE3DAF2067F8AB00996045 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EE3DAE2067F8AB00996045 /* Configuration.swift */; };
+		F52A1718988160AA45E25AA1 /* Pods_eman_cart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CF5B13E648906EF9BD1CD4A /* Pods_eman_cart.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,10 +43,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3EBCC5DD267F00CB04B7DE16 /* Pods-eman_cart.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eman_cart.release.xcconfig"; path = "Pods/Target Support Files/Pods-eman_cart/Pods-eman_cart.release.xcconfig"; sourceTree = "<group>"; };
+		49C523C8C06171D52FE78D9D /* Pods-eman_cartTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eman_cartTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-eman_cartTests/Pods-eman_cartTests.release.xcconfig"; sourceTree = "<group>"; };
+		4CF5B13E648906EF9BD1CD4A /* Pods_eman_cart.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eman_cart.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		586985D13DFF53BAE23D4AE2 /* Pods_eman_cartTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eman_cartTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		79BF23456C04A6C395D6D035 /* Pods-eman_cartTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eman_cartTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-eman_cartTests/Pods-eman_cartTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D7B6F6977B25EF19B4E15B87 /* Pods-eman_cart.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eman_cart.debug.xcconfig"; path = "Pods/Target Support Files/Pods-eman_cart/Pods-eman_cart.debug.xcconfig"; sourceTree = "<group>"; };
+		E1840BED206810F600475E16 /* Currencies.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Currencies.json; sourceTree = "<group>"; };
 		E1960F0920582014001E0D4C /* eman_cart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eman_cart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1960F0C20582014001E0D4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E1960F0E20582015001E0D4C /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		E1960F1020582015001E0D4C /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		E1960F1320582015001E0D4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E1960F1520582015001E0D4C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E1960F1820582015001E0D4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -38,6 +59,21 @@
 		E1960F1F20582015001E0D4C /* eman_cartTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = eman_cartTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1960F2320582015001E0D4C /* eman_cartTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eman_cartTests.swift; sourceTree = "<group>"; };
 		E1960F2520582015001E0D4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1960F30205EAF78001E0D4C /* ProductCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCell.xib; sourceTree = "<group>"; };
+		E1960F33205EB0E5001E0D4C /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
+		E197892C205EB24F00445F7C /* Products.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Products.json; sourceTree = "<group>"; };
+		E197892F205EB54500445F7C /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
+		E1978932205EB62200445F7C /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		E1978935205EB73700445F7C /* ProductsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsService.swift; sourceTree = "<group>"; };
+		E1978937205EBCAE00445F7C /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		E1978939205EBCE700445F7C /* Rates.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Rates.json; sourceTree = "<group>"; };
+		E197893B205EBD6A00445F7C /* CurrenciesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrenciesService.swift; sourceTree = "<group>"; };
+		E197893D205EBEC200445F7C /* ProductsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewModel.swift; sourceTree = "<group>"; };
+		E1C139F0205ED8D300652552 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		E1C139F4206067BC00652552 /* CartService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartService.swift; sourceTree = "<group>"; };
+		E1C13A012062B78E00652552 /* CartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartCell.swift; sourceTree = "<group>"; };
+		E1EE3DAB2066874200996045 /* CartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewModel.swift; sourceTree = "<group>"; };
+		E1EE3DAE2067F8AB00996045 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F52A1718988160AA45E25AA1 /* Pods_eman_cart.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,18 +89,32 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24FA8D5DCA824C2F84D60C39 /* Pods_eman_cartTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B7099C126C8D0612DBBD9006 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D7B6F6977B25EF19B4E15B87 /* Pods-eman_cart.debug.xcconfig */,
+				3EBCC5DD267F00CB04B7DE16 /* Pods-eman_cart.release.xcconfig */,
+				79BF23456C04A6C395D6D035 /* Pods-eman_cartTests.debug.xcconfig */,
+				49C523C8C06171D52FE78D9D /* Pods-eman_cartTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E1960F0020582014001E0D4C = {
 			isa = PBXGroup;
 			children = (
 				E1960F0B20582014001E0D4C /* eman_cart */,
 				E1960F2220582015001E0D4C /* eman_cartTests */,
 				E1960F0A20582014001E0D4C /* Products */,
+				B7099C126C8D0612DBBD9006 /* Pods */,
+				F0805E658ABCBA0C20D84FA1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,13 +130,13 @@
 		E1960F0B20582014001E0D4C /* eman_cart */ = {
 			isa = PBXGroup;
 			children = (
+				E1960F2F205EAE23001E0D4C /* Assets */,
+				E1978931205EB58700445F7C /* Model */,
+				E1960F2E205EAE13001E0D4C /* UI */,
+				E197892E205EB52700445F7C /* ViewControllers */,
 				E1960F0C20582014001E0D4C /* AppDelegate.swift */,
-				E1960F0E20582015001E0D4C /* FirstViewController.swift */,
-				E1960F1020582015001E0D4C /* SecondViewController.swift */,
-				E1960F1220582015001E0D4C /* Main.storyboard */,
-				E1960F1520582015001E0D4C /* Assets.xcassets */,
-				E1960F1720582015001E0D4C /* LaunchScreen.storyboard */,
 				E1960F1A20582015001E0D4C /* Info.plist */,
+				E1EE3DAE2067F8AB00996045 /* Configuration.swift */,
 			);
 			path = eman_cart;
 			sourceTree = "<group>";
@@ -99,6 +150,77 @@
 			path = eman_cartTests;
 			sourceTree = "<group>";
 		};
+		E1960F2E205EAE13001E0D4C /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				E1960F1220582015001E0D4C /* Main.storyboard */,
+				E1960F1720582015001E0D4C /* LaunchScreen.storyboard */,
+				E1960F32205EAF81001E0D4C /* Collection View Cells */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		E1960F2F205EAE23001E0D4C /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				E1960F1520582015001E0D4C /* Assets.xcassets */,
+				E197892C205EB24F00445F7C /* Products.json */,
+				E1978939205EBCE700445F7C /* Rates.json */,
+				E1840BED206810F600475E16 /* Currencies.json */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		E1960F32205EAF81001E0D4C /* Collection View Cells */ = {
+			isa = PBXGroup;
+			children = (
+				E1960F30205EAF78001E0D4C /* ProductCell.xib */,
+				E1960F33205EB0E5001E0D4C /* ProductCell.swift */,
+				E1C13A012062B78E00652552 /* CartCell.swift */,
+			);
+			path = "Collection View Cells";
+			sourceTree = "<group>";
+		};
+		E197892E205EB52700445F7C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E197892F205EB54500445F7C /* ProductsViewController.swift */,
+				E197893D205EBEC200445F7C /* ProductsViewModel.swift */,
+				E1C139F0205ED8D300652552 /* CartViewController.swift */,
+				E1EE3DAB2066874200996045 /* CartViewModel.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		E1978931205EB58700445F7C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E1978934205EB72900445F7C /* Services */,
+				E1978932205EB62200445F7C /* Product.swift */,
+				E1978937205EBCAE00445F7C /* Currency.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E1978934205EB72900445F7C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E1978935205EB73700445F7C /* ProductsService.swift */,
+				E197893B205EBD6A00445F7C /* CurrenciesService.swift */,
+				E1C139F4206067BC00652552 /* CartService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		F0805E658ABCBA0C20D84FA1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4CF5B13E648906EF9BD1CD4A /* Pods_eman_cart.framework */,
+				586985D13DFF53BAE23D4AE2 /* Pods_eman_cartTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,9 +228,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E1960F2820582015001E0D4C /* Build configuration list for PBXNativeTarget "eman_cart" */;
 			buildPhases = (
+				070A5083FDAB1C0EB038997E /* [CP] Check Pods Manifest.lock */,
 				E1960F0520582014001E0D4C /* Sources */,
 				E1960F0620582014001E0D4C /* Frameworks */,
 				E1960F0720582014001E0D4C /* Resources */,
+				6E2815630E6EE72F719E0EBC /* [CP] Embed Pods Frameworks */,
+				25857C5732F2805BF0ABE199 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -123,9 +248,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E1960F2B20582015001E0D4C /* Build configuration list for PBXNativeTarget "eman_cartTests" */;
 			buildPhases = (
+				97DDA7F073CEBD16C4675948 /* [CP] Check Pods Manifest.lock */,
 				E1960F1B20582015001E0D4C /* Sources */,
 				E1960F1C20582015001E0D4C /* Frameworks */,
 				E1960F1D20582015001E0D4C /* Resources */,
+				B395C168E23420D9B6B3D57B /* [CP] Embed Pods Frameworks */,
+				1C693300A8940BBE6D1D9C36 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -183,8 +311,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1960F1920582015001E0D4C /* LaunchScreen.storyboard in Resources */,
+				E1960F31205EAF78001E0D4C /* ProductCell.xib in Resources */,
+				E197893A205EBCE700445F7C /* Rates.json in Resources */,
 				E1960F1620582015001E0D4C /* Assets.xcassets in Resources */,
 				E1960F1420582015001E0D4C /* Main.storyboard in Resources */,
+				E1840BEE206810F600475E16 /* Currencies.json in Resources */,
+				E197892D205EB24F00445F7C /* Products.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,14 +329,130 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		070A5083FDAB1C0EB038997E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-eman_cart-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1C693300A8940BBE6D1D9C36 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-eman_cartTests/Pods-eman_cartTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		25857C5732F2805BF0ABE199 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-eman_cart/Pods-eman_cart-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6E2815630E6EE72F719E0EBC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-eman_cart/Pods-eman_cart-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/ReachabilitySwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReachabilitySwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-eman_cart/Pods-eman_cart-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		97DDA7F073CEBD16C4675948 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-eman_cartTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B395C168E23420D9B6B3D57B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-eman_cartTests/Pods-eman_cartTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E1960F0520582014001E0D4C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1960F1120582015001E0D4C /* SecondViewController.swift in Sources */,
+				E1C139F5206067BC00652552 /* CartService.swift in Sources */,
+				E1978938205EBCAE00445F7C /* Currency.swift in Sources */,
+				E1978930205EB54500445F7C /* ProductsViewController.swift in Sources */,
+				E1EE3DAC2066874200996045 /* CartViewModel.swift in Sources */,
+				E197893E205EBEC200445F7C /* ProductsViewModel.swift in Sources */,
+				E1978933205EB62200445F7C /* Product.swift in Sources */,
 				E1960F0D20582014001E0D4C /* AppDelegate.swift in Sources */,
-				E1960F0F20582015001E0D4C /* FirstViewController.swift in Sources */,
+				E1EE3DAF2067F8AB00996045 /* Configuration.swift in Sources */,
+				E1960F34205EB0E5001E0D4C /* ProductCell.swift in Sources */,
+				E1C13A022062B78E00652552 /* CartCell.swift in Sources */,
+				E197893C205EBD6A00445F7C /* CurrenciesService.swift in Sources */,
+				E1C139F1205ED8D300652552 /* CartViewController.swift in Sources */,
+				E1978936205EB73700445F7C /* ProductsService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,6 +603,7 @@
 		};
 		E1960F2920582015001E0D4C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D7B6F6977B25EF19B4E15B87 /* Pods-eman_cart.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -370,6 +619,7 @@
 		};
 		E1960F2A20582015001E0D4C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3EBCC5DD267F00CB04B7DE16 /* Pods-eman_cart.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -385,6 +635,7 @@
 		};
 		E1960F2C20582015001E0D4C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 79BF23456C04A6C395D6D035 /* Pods-eman_cartTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -402,6 +653,7 @@
 		};
 		E1960F2D20582015001E0D4C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49C523C8C06171D52FE78D9D /* Pods-eman_cartTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

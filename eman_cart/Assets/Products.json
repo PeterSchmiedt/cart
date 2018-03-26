@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "Hrášek",
+    "price": 0.95,
+    "imageAsset": "product_pea",
+    "unit": "balení"
+  },
+  {
+    "id": 2,
+    "name": "Vejce",
+    "price": 2.1,
+    "imageAsset": "product_egg",
+    "unit": "12 kusů"
+  },
+  {
+    "id": 3,
+    "name": "Mléko",
+    "price": 1.3,
+    "imageAsset": "product_milk",
+    "unit": "láhev"
+  },
+  {
+    "id": 4,
+    "name": "Fazole",
+    "price": 0.73,
+    "imageAsset": "product_bean",
+    "unit": "plechovka"
+  },
+]

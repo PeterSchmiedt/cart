@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="moX-JK-fe3" customClass="ProductCell" customModule="eman_cart" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="175" height="185"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="175" height="185"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="az7-7c-M30">
+                        <rect key="frame" x="0.0" y="0.0" width="175" height="98.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="az7-7c-M30" secondAttribute="height" multiplier="16:9" id="Rgz-jg-wtE"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BdE-MP-ifo">
+                        <rect key="frame" x="8" y="106.5" width="159" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price: 1.99 EUR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s1V-w6-Lry">
+                        <rect key="frame" x="8" y="126.5" width="159" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bVc-W9-pHz">
+                        <rect key="frame" x="8" y="146.5" width="159" height="30.5"/>
+                        <state key="normal" title="Add to Cart"/>
+                        <connections>
+                            <action selector="addToCartAction:" destination="moX-JK-fe3" eventType="touchUpInside" id="69k-g4-Dbq"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="bVc-W9-pHz" secondAttribute="trailing" constant="8" id="1lm-bW-ftE"/>
+                <constraint firstItem="EoN-XZ-ZAf" firstAttribute="trailing" secondItem="BdE-MP-ifo" secondAttribute="trailing" constant="8" id="ESu-Qs-L7j"/>
+                <constraint firstAttribute="bottom" secondItem="bVc-W9-pHz" secondAttribute="bottom" constant="8" id="Hsb-2j-w9g"/>
+                <constraint firstItem="s1V-w6-Lry" firstAttribute="top" secondItem="BdE-MP-ifo" secondAttribute="bottom" constant="2" id="N8K-9o-zB9"/>
+                <constraint firstItem="az7-7c-M30" firstAttribute="top" secondItem="moX-JK-fe3" secondAttribute="top" id="RQ9-G1-a18"/>
+                <constraint firstItem="BdE-MP-ifo" firstAttribute="leading" secondItem="moX-JK-fe3" secondAttribute="leading" constant="8" id="WUJ-km-CyP"/>
+                <constraint firstItem="BdE-MP-ifo" firstAttribute="top" secondItem="az7-7c-M30" secondAttribute="bottom" constant="8" id="aQg-8W-7bu"/>
+                <constraint firstItem="s1V-w6-Lry" firstAttribute="leading" secondItem="BdE-MP-ifo" secondAttribute="leading" id="bA1-KE-5wz"/>
+                <constraint firstItem="bVc-W9-pHz" firstAttribute="top" secondItem="s1V-w6-Lry" secondAttribute="bottom" constant="4" id="hWL-RX-ecd"/>
+                <constraint firstItem="az7-7c-M30" firstAttribute="leading" secondItem="moX-JK-fe3" secondAttribute="leading" id="lBJ-62-4ib"/>
+                <constraint firstItem="EoN-XZ-ZAf" firstAttribute="trailing" secondItem="s1V-w6-Lry" secondAttribute="trailing" constant="8" id="s2j-LT-dhu"/>
+                <constraint firstItem="bVc-W9-pHz" firstAttribute="leading" secondItem="moX-JK-fe3" secondAttribute="leading" constant="8" id="uJ6-dY-4Fu"/>
+                <constraint firstAttribute="trailing" secondItem="az7-7c-M30" secondAttribute="trailing" id="xhp-Od-6Of"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="EoN-XZ-ZAf"/>
+            <size key="customSize" width="240" height="179"/>
+            <connections>
+                <outlet property="addToCartButton" destination="bVc-W9-pHz" id="2sm-dW-qq0"/>
+                <outlet property="productImageView" destination="az7-7c-M30" id="D7t-1H-eOX"/>
+                <outlet property="productNameLabel" destination="BdE-MP-ifo" id="rf1-CR-3JW"/>
+                <outlet property="productPriceLabel" destination="s1V-w6-Lry" id="DEW-Xb-GpJ"/>
+            </connections>
+            <point key="canvasLocation" x="92.5" y="4.5"/>
+        </collectionViewCell>
+    </objects>
+</document>
