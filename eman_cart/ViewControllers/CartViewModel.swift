@@ -12,4 +12,6 @@ class CartViewModel: NSObject {
     var data: [CartService.CartItem] {
         return CartService.shared.all()
     }
+    
+    var currency = CurrenciesService.shared.find(key: "USD")
 }

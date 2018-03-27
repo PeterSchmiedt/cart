@@ -10,9 +10,10 @@ import Foundation
 import Alamofire
 import ReachabilitySwift
 import SwiftyJSON
+import Alamofire_SwiftyJSON
 
-private let currencyLayerRatesEndpoint = "http://www.apilayer.net/api/list?access_key=%@"
-private let currencyLayerCurrenciesEndpoint = "http://www.apilayer.net/api/live?access_key=%@&format=1"
+private let currencyLayerCurrenciesEndpoint = "http://www.apilayer.net/api/list?access_key=%@"
+private let currencyLayerRatesEndpoint = "http://www.apilayer.net/api/live?access_key=%@&format=1"
 
 private let cacheDirectory = NSSearchPathForDirectoriesInDomains(.cachesDirectory, .userDomainMask, true).first!
 private let currenciesJsonFile = URL(fileURLWithPath: cacheDirectory).appendingPathComponent("Currencies.json")
@@ -48,96 +49,89 @@ class CurrenciesService {
         }
     }
     
+    private func stringToJson(data: String) -> JSON {
+        var json: JSON = JSON()
+        if let dataFromString = data.data(using: .utf8, allowLossyConversion: false) {
+            do {
+                json = try JSON(data: dataFromString)
+            } catch {
+                print("stringToJson - error creating JSON from String")
+            }
+        }
+        return json
+    }
+    
+    private func jsonToMemory(currenciesJSON: JSON, ratesJSON: JSON) {
+        //Check if the response was OK
+        if currenciesJSON["success"] == true && ratesJSON["success"] == true {
+            cachedCurrencies?.removeAll()
+            cachedCurrencies = [String:Currency]()
+            
+            let cJSON = currenciesJSON["currencies"]
+            let rJSON = ratesJSON["quotes"]
+            
+            let sourceCurrency = ratesJSON["source"]
+            
+            for (key, value): (String, JSON) in cJSON {
+                let rateKey = "\(sourceCurrency)\(key)"
+                cachedCurrencies![key] = Currency(code: key, name: value.string!, rate: rJSON[rateKey].double!) //force unwrap
+            }
+        } else {
+            print("jsonToMemory - success =! true")
+        }
+    }
+    
     //MARK: Cache to Memory
     private func cacheToMemory() {
+        
         do {
-            let currenciesJsonTemp = try String(contentsOf: currenciesJsonFile)
-            let ratesJsonTemp = try String(contentsOf: ratesJsonFile)
+            let currenciesString = try String(contentsOf: currenciesJsonFile)
+            let ratesString = try String(contentsOf: ratesJsonFile)
+
+            let cJson = stringToJson(data: currenciesString)
+            let rJson = stringToJson(data: ratesString)
             
-            _ = loadCurrenciesAndRatesFromData(currenciesData: currenciesJsonTemp, ratesData: ratesJsonTemp)
+            jsonToMemory(currenciesJSON: cJson, ratesJSON: rJson)
+            
         } catch {
             print("Unexpected error: \(error).")
         }
     }
     
-    //MARK: Wants online update CurrencyLayer (CHECK REACHABILITY)
     private func wantsOnlineUpdate(){
-        let currencyEndpoint = String(format: currencyLayerCurrenciesEndpoint, currencyLayerApiKey)
+        //let currencyEndpoint = String(format: currencyLayerCurrenciesEndpoint, currencyLayerApiKey)
         let ratesEndpoint = String(format: currencyLayerRatesEndpoint, currencyLayerApiKey)
-        var curenciesResponse: Any?
-        var ratesResponse: Any?
         
-        
-        Alamofire.request(currencyEndpoint).responseJSON { response in
-            if let json = response.result.value {
-                curenciesResponse = json // serialized json response
+        Alamofire.request(ratesEndpoint).validate().responseSwiftyJSON { response in
+            if((response.result.value) != nil) {
+                let ratesJSON = JSON(response.result.value!)
+                do {
+                    let currenciesString = try String(contentsOf: currenciesJsonFile)
+                    let currenciesCacheJson = self.stringToJson(data: currenciesString)
+                    self.jsonToMemory(currenciesJSON: currenciesCacheJson, ratesJSON: ratesJSON)
+                } catch {
+                    print("wantsOnlineUpdate: \(error).")
+                }
+            } else {
+                print("wantsOnlineUpdate - ratesRequest DENIED")
             }
-        }
-        
-        Alamofire.request(ratesEndpoint).responseJSON { response in
-            if let json = response.result.value {
-                ratesResponse = json // serialized json response
-            }
-        }
-        
-        //if this went through, update the Cache
-        //TODO: make the responses in string
-        if loadCurrenciesAndRatesFromData(currenciesData: curenciesResponse!, ratesData: ratesResponse!) {
-            
         }
     }
     
-    //MARK: CACHE UPDATE
-    private func updateCache() {
-        
-    }
-    
-    // MARK: Cache and online (async) to Memory
+    // MARK: Cache and online (async) to Memory-----------------------------------------------------------------------------------------------------
     private func loadCurrencies() {
         //Bundle to Cache (we must have some data at the start)
         ensureCacheAvailable()
-        
+
         // Load from cache
         cacheToMemory()
-        
+
         // Want to load online
         if reachability.isReachable {
-            //wantsOnlineUpdate()
+            wantsOnlineUpdate()
         }
-        
-    }
-    
-    //MARK: Load to Memory from DataSource
-    private func loadCurrenciesAndRatesFromData(currenciesData: Any, ratesData: Any) -> Bool {
-        cachedCurrencies?.removeAll()
-        cachedCurrencies = [String:Currency]()
-        
-//        guard let cDataFromString = currenciesData as? String
-//            else {return false}
-//
-//
-//        if let c1 = cDataFromString.data(using: .utf8, allowLossyConversion: false) {
-//            let cJson = JSON(data: c1)
-//        }
-//
-//
-//        let rJson = JSON(ratesData)
-        
-//        guard let c1 = currenciesData as? [String:Any],
-//            let currenciesDictionary = c1["currencies"] as? [String:String]
-//            else { return false }
-//
-//        guard let r1 = ratesData as? [String:Any], let sourceCurrency = r1["source"] as? String,
-//            let ratesDictionary = r1["quotes"] as? [String: Double]
-//            else { return false }
-//
-//        for (key, value) in currenciesDictionary {
-//            let rateKey = "\(sourceCurrency)\(key)"
-//            guard let rate = ratesDictionary[rateKey] else { continue }
-//            cachedCurrencies![key] = Currency(code: key, name: value, rate: rate)
-//        }
-        return true
-    }
+
+    }//------------------------------------------------------------------------------------------------------------------------------------------------
     
     func all() -> [String: Currency] {
         if (cachedCurrencies == nil) {

@@ -33,14 +33,15 @@ class CartCell: UITableViewCell {
     }
     
     //MARK: Public Interface
-    func setupCell(cartItem: CartService.CartItem) {
+    func setupCell(cartItem: CartService.CartItem, currency: Currency?) {
         productImageView.image = UIImage(named: cartItem.item.imageAsset)
         productLabel.text = cartItem.item.name
         
         quantityStepper.value = Double(cartItem.quantity)
         productQuantity.text = String(cartItem.quantity)
         
-        productPrice.text = String(cartItem.item.price * Double(cartItem.quantity))
+        //productPrice.text = String(cartItem.item.price * Double(cartItem.quantity))
+        productPrice.text = "Price: \(cartItem.item.priceIn(currency: currency!, quantity: cartItem.quantity))"
         self.cartItem = cartItem
     }
     

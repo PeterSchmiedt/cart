@@ -11,7 +11,8 @@ target 'eman_cart' do
   # Pods for eman_cart
   pod 'Alamofire'
   pod 'ReachabilitySwift'
-  pod 'SwiftyJSON'
+  pod 'SwiftyJSON', '~> 4.0.0'
+  pod 'Alamofire-SwiftyJSON', '>= 3.0.0'
 
   target 'eman_cartTests' do
     inherit! :search_paths

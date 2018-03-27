@@ -25,7 +25,7 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: CartCell.identifier) as? CartCell else { return UITableViewCell() }
         let cartItem = viewModel.data[indexPath.row]
-        cell.setupCell(cartItem: cartItem)
+        cell.setupCell(cartItem: cartItem, currency: viewModel.currency)
         cell.delegate = self
         return cell
     }

@@ -15,5 +15,5 @@ class ProductsViewModel: NSObject {
     
     //TODO: implement currencies directly in product
     // By default, we show in USD, selection only available at checkout - USD must exist!
-    var currency = CurrenciesService.shared.find(key: "USDUSD") //CurrenciesService.shared.find(name: "USD")!
+    var currency = CurrenciesService.shared.find(key: "USD") //CurrenciesService.shared.find(name: "USD")!
 }

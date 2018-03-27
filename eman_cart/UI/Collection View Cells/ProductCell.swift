@@ -20,7 +20,7 @@ class ProductCell: UICollectionViewCell {
         productImageView.image = UIImage(named: product.imageAsset)
         productNameLabel.text = product.name
         //I can force unwrap for now 
-        productPriceLabel.text = "Price: \(product.priceIn(currency: currency!)) / \(product.unit)"
+        productPriceLabel.text = "Price: \(product.priceIn(currency: currency!, quantity: 1)) / \(product.unit)"
         productId = product.id
     }
     

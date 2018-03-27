@@ -20,7 +20,7 @@ struct Product: Codable, Equatable {
     var unit: String
     
     //Currency can be computed directly in the Model (I can choose to display the price in different currencies whenever I choose to)
-    func priceIn(currency: Currency) -> String {
-        return String(format: "%.2f %@", price * currency.rate, currency.name)
+    func priceIn(currency: Currency, quantity: Int) -> String {
+        return String(format: "%.2f %@", price * Double(quantity) * currency.rate, currency.code)
     }
 }
