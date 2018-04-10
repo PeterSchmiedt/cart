@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		24FA8D5DCA824C2F84D60C39 /* Pods_eman_cartTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 586985D13DFF53BAE23D4AE2 /* Pods_eman_cartTests.framework */; };
+		E17CBA9F2072A61D009E27BE /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17CBA9E2072A61D009E27BE /* CheckoutViewController.swift */; };
+		E17CBAA12072A8DF009E27BE /* CheckoutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17CBAA02072A8DF009E27BE /* CheckoutViewModel.swift */; };
 		E1840BEE206810F600475E16 /* Currencies.json in Resources */ = {isa = PBXBuildFile; fileRef = E1840BED206810F600475E16 /* Currencies.json */; };
 		E1960F0D20582014001E0D4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1960F0C20582014001E0D4C /* AppDelegate.swift */; };
 		E1960F1420582015001E0D4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1960F1220582015001E0D4C /* Main.storyboard */; };
@@ -49,6 +51,8 @@
 		586985D13DFF53BAE23D4AE2 /* Pods_eman_cartTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eman_cartTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		79BF23456C04A6C395D6D035 /* Pods-eman_cartTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eman_cartTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-eman_cartTests/Pods-eman_cartTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D7B6F6977B25EF19B4E15B87 /* Pods-eman_cart.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eman_cart.debug.xcconfig"; path = "Pods/Target Support Files/Pods-eman_cart/Pods-eman_cart.debug.xcconfig"; sourceTree = "<group>"; };
+		E17CBA9E2072A61D009E27BE /* CheckoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutViewController.swift; sourceTree = "<group>"; };
+		E17CBAA02072A8DF009E27BE /* CheckoutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutViewModel.swift; sourceTree = "<group>"; };
 		E1840BED206810F600475E16 /* Currencies.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Currencies.json; sourceTree = "<group>"; };
 		E1960F0920582014001E0D4C /* eman_cart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eman_cart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1960F0C20582014001E0D4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -188,6 +192,8 @@
 				E197893D205EBEC200445F7C /* ProductsViewModel.swift */,
 				E1C139F0205ED8D300652552 /* CartViewController.swift */,
 				E1EE3DAB2066874200996045 /* CartViewModel.swift */,
+				E17CBA9E2072A61D009E27BE /* CheckoutViewController.swift */,
+				E17CBAA02072A8DF009E27BE /* CheckoutViewModel.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -442,12 +448,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E17CBAA12072A8DF009E27BE /* CheckoutViewModel.swift in Sources */,
 				E1C139F5206067BC00652552 /* CartService.swift in Sources */,
 				E1978938205EBCAE00445F7C /* Currency.swift in Sources */,
 				E1978930205EB54500445F7C /* ProductsViewController.swift in Sources */,
 				E1EE3DAC2066874200996045 /* CartViewModel.swift in Sources */,
 				E197893E205EBEC200445F7C /* ProductsViewModel.swift in Sources */,
 				E1978933205EB62200445F7C /* Product.swift in Sources */,
+				E17CBA9F2072A61D009E27BE /* CheckoutViewController.swift in Sources */,
 				E1960F0D20582014001E0D4C /* AppDelegate.swift in Sources */,
 				E1EE3DAF2067F8AB00996045 /* Configuration.swift in Sources */,
 				E1960F34205EB0E5001E0D4C /* ProductCell.swift in Sources */,

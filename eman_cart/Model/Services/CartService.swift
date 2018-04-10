@@ -24,7 +24,7 @@ class CartService {
         var item: Product
         var quantity: Int
         
-        //TODO: don't know if currency computation will be needed
+        //MARK: price
     }
     
     private var cartItems = [CartItem]()

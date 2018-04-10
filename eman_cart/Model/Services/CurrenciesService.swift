@@ -28,6 +28,7 @@ class CurrenciesService {
     
     let reachability = Reachability()!
     var lastFetchTime = Date(timeIntervalSince1970: 0)
+    //var fetchTimeInterval = Date(timeIntervalSinceNow: 60) // 1 hour
     
     private var cachedCurrencies: [String: Currency]?
     
@@ -99,16 +100,28 @@ class CurrenciesService {
     }
     
     private func wantsOnlineUpdate(){
-        //let currencyEndpoint = String(format: currencyLayerCurrenciesEndpoint, currencyLayerApiKey)
         let ratesEndpoint = String(format: currencyLayerRatesEndpoint, currencyLayerApiKey)
+        
+        if(lastFetchTime.timeIntervalSinceNow > TimeInterval(60*60)) {
+            print("You have current Rates.")
+            return
+        }
+        
+        // TODO LastUpdate
         
         Alamofire.request(ratesEndpoint).validate().responseSwiftyJSON { response in
             if((response.result.value) != nil) {
                 let ratesJSON = JSON(response.result.value!)
+                
                 do {
+                    try response.data?.write(to: ratesJsonFile) //write to cache
                     let currenciesString = try String(contentsOf: currenciesJsonFile)
                     let currenciesCacheJson = self.stringToJson(data: currenciesString)
                     self.jsonToMemory(currenciesJSON: currenciesCacheJson, ratesJSON: ratesJSON)
+                    
+                    print("Rates updated.")
+                    
+                    self.lastFetchTime = Date(timeIntervalSinceNow: 0)
                 } catch {
                     print("wantsOnlineUpdate: \(error).")
                 }
@@ -118,7 +131,7 @@ class CurrenciesService {
         }
     }
     
-    // MARK: Cache and online (async) to Memory-----------------------------------------------------------------------------------------------------
+    // MARK: Cache and online (async) to Memory
     private func loadCurrencies() {
         //Bundle to Cache (we must have some data at the start)
         ensureCacheAvailable()
@@ -130,8 +143,7 @@ class CurrenciesService {
         if reachability.isReachable {
             wantsOnlineUpdate()
         }
-
-    }//------------------------------------------------------------------------------------------------------------------------------------------------
+    }
     
     func all() -> [String: Currency] {
         if (cachedCurrencies == nil) {

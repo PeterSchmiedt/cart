@@ -41,7 +41,7 @@ class CartCell: UITableViewCell {
         productQuantity.text = String(cartItem.quantity)
         
         //productPrice.text = String(cartItem.item.price * Double(cartItem.quantity))
-        productPrice.text = "Price: \(cartItem.item.priceIn(currency: currency!, quantity: cartItem.quantity))"
+        productPrice.text = "\(cartItem.item.priceIn(currency: currency!, quantity: cartItem.quantity))"
         self.cartItem = cartItem
     }
     
